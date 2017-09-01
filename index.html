@@ -1,0 +1,30 @@
+<html>
+<head> Test </head>
+  <body>
+   <p> Some more text </p>
+   <p id='header'>Some text</p>
+   <p id='obj'> </p>
+   <script>
+     var textMessage = 'Header updated';
+     document.getElementById('header').innerHTML = textMessage;
+     
+     var obj = {firstName:'Vas', lastName:'Glass'};
+     obj.fullName = function() {return this.firstName + ' ' + this.lastName};
+     document.getElementById('obj').innerHTML = obj.fullName();
+
+     function printCookoDooko() {
+       var t = document.getElementById('button1');
+       if (t.innerHTML == 'Dooko!') t.innerHTML = 'Cooko!';
+       else t.innerHTML = 'Dooko!'
+     }
+
+    </script>
+    
+    <button id='button1' onclick='printCookoDooko()'> Date </button>
+    <p></p>
+    
+    <button id='button2' onmouseover='this.innerHTML="Aha!"' onmouseout='this.innerHTML="Zzzzzz...."'> Zzzzzz.... </button>
+      
+    
+  </body>
+</html>
